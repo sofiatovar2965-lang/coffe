@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Sitio de Cafe</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-logo">
+                <h2 class="nav-text">☕ Coffee</h2>
+            </a>
+
+            <!-- Checkbox invisible: controla el menu movil -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <!-- Menu de navegacion -->
+             <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./menu.html" class="nav-link">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./galeria.html" class="nav-link">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contactenos.html" class="nav-link">Contactenos</a>
+                </li>
+             </ul>
+            
+             <!-- acciones: icono usuario + botón hamburguesa -->
+            <div class="nav-actions">
+                <a href="./login.html" class="nav-login" title="Iniciar Sesion">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+
+            <!-- Label vinculado al checkbox: actua como botón hamburguesa -->
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="hero-section">
+            <div class="section-content">
+                
+                <!-- Columna Izquierda: texto-->
+                <div class="hero-details">
+                    <h2 class="title">El mejor Café</h2>
+                    <h3 class="subtitle">
+                       Haz tu día con nuestro especial coffee 
+                    </h3>
+                    <p class="description">
+                        Bienvenido a nuestro paraiso del café, donde cada
+                        grano cuenta una historia y cada taza despierta alegria
+                    </p>
+                    <div class="buttons">
+                        <a href="#" class="button order-now">Ordenar ahora</a>
+                        <a href="#" class="button contact-us">Contáctanos</a>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: imagen -->
+                <div class="hero-image-wrapper">
+                    <img src="./Img/coffee-hero-section.png"
+                         alt="hero"
+                         class="hero-image">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
