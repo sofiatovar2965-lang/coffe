@@ -48,7 +48,7 @@ header .navbar {
     background-color: #e2750f; 
     color: #3b141c
 }
-.nav-actions{
+    .nav-actions{
     display: flex;
     align-items: center;
     gap: 16px;
@@ -148,7 +148,6 @@ p {
 }
 
 @media (max-width: 768px){
-
 
     .hamburger {
         display: flex;
