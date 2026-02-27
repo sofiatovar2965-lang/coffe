@@ -7,7 +7,8 @@
     font-family: "Poppins", sans-serif;
 }
 button { cursor: pointer; border: none; background: none;}
-img    { width: 100%; }
+img    { width: 500px; }
+
 ul     { list-style: none; }
 a      { text-decoration: none;}
 
@@ -27,11 +28,13 @@ header .navbar {
     color: white;
 }
 .navbar .nav-menu {
-    display: flex;
-    gap: 10px;
+   display: flex;
+    gap: 40px;      /* más espacio entre palabras */
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.8rem;
+
 }
+
 .nav-text {
     font-family: "Ribeye", cursive;
     padding-left: 50px;
@@ -40,15 +43,17 @@ header .navbar {
 .navbar .nav-menu .nav-link {
     padding: 10px 18px;
     color: white; 
-    font-size: large;
+    font-size:  inherit;
     border-radius: 20px;
     transition: 0.3s ease; 
 }
+
+
 .navbar .nav-menu .nav-link:hover {
     background-color: #e2750f; 
     color: #3b141c
 }
-    .nav-actions{
+.nav-actions{
     display: flex;
     align-items: center;
     gap: 16px;
@@ -128,8 +133,11 @@ header .navbar {
     transition: 0.3s ease;
 }
 .hero-section .hero-details .buttons {
-    display: flex;
-    gap: 23px;
+    padding: 16px 40px;   /* tamaño del botón */
+    font-size: 1.1rem;   /* tamaño del texto */
+    font-weight: 600;
+    border-radius: 30px;
+    gap: 20px;
 }
 .hero-section .hero-details .button:hover {
     color: #ffffff;
@@ -137,15 +145,20 @@ header .navbar {
 .hero-section .hero-image-wrapper {
     max-width: 800px;
     margin-right: 30px;
+    display: flex;
+    justify-content: center; /* centra horizontal */
+    align-items: center;  
 }
-h3 {
-    font-size: 50px;
-    margin-bottom: 16px;
+
+.hero-section .hero-image-wrapper img {
+     max-width: 650px;  /* más grande */
+    height: auto;
+     margin-right: 400px;
 }
-p {
-    font-size: 1.2rem;
-    padding-bottom: 20px;
-}
+
+
+
+
 
 @media (max-width: 768px){
 
@@ -213,25 +226,35 @@ p {
 }
 
 /* Hero */
+
 .hero-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    color: white;
+    padding: 0 60px;
+    gap: 40px;
+}
+@media (max-width: 768px) {
+  .hero-section .section-content {
     flex-direction: column-reverse;
-    justify-content: center;
-    padding: 100px 24px 60px;
     text-align: center;
-    gap: 30px;
+    padding: 100px 24px 60px;
+  }
 }
 
 .hero-section .hero-details .title {
-    font-size: 2rem;
+    font-size: 5rem;
 }
 
 .hero-section .hero-details .subtitle {
-    font-size: 1.6rem;
+    font-size: 2.6rem;
     max-width: 100%;
 }
 
 .hero-section .hero-details .description {
-    font-size: 1rem;
+    font-size: 1.1rem;
     max-width: 100%;
 }
 

@@ -1,0 +1,140 @@
+/* --- Variables y Configuración --- */
+:root {
+  --bg-main:      #1a1a1a;
+  --bg-navbar:    #3b141c;
+  --bg-card:      #4a1e1e;
+  --bg-input:     #c8a8a8;
+  --accent:       #e2750f;
+  --accent-hover: #ff8c1a;
+  --text-muted:   #c8a8a8;
+  --font-logo:    'Ribeye', cursive;
+  --font-display: "Poppins", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+  background-color: var(--bg-main);
+  color: white;
+  min-height: 100vh;
+}
+
+/* --- Header & Navbar --- */
+header {
+  position: fixed;
+  top: 0; width: 100%; z-index: 1000;
+  background-color: var(--bg-navbar);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 15px 5%;
+}
+
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+
+.nav-text {
+  font-family: var(--font-logo);
+  color: white !important;
+  font-size: 28px; margin-left: 10px;
+}
+
+.nav-menu { display: flex; gap: 25px; list-style: none; }
+
+.nav-link {
+  color: white !important; text-decoration: none;
+  font-size: 16px; transition: 0.3s;
+}
+
+.nav-link:hover { color: var(--accent) !important; }
+
+.nav-icons { display: flex; align-items: center; gap: 15px; }
+
+.carrito {
+  position: relative; font-size: 22px; cursor: pointer; transition: 0.3s;
+}
+
+.carrito:hover { color: var(--accent) !important; transform: scale(1.1); }
+
+#contador {
+  position: absolute; top: -8px; right: -10px;
+  background: var(--accent); color: white;
+  font-size: 11px; padding: 2px 6px; border-radius: 50%;
+}
+
+/* --- Main Content --- */
+.main {
+  display: flex; justify-content: center; align-items: center;
+  padding: 120px 20px 60px;
+}
+
+.login-card {
+  background-color: var(--bg-card);
+  padding: 40px; border-radius: 20px;
+  width: 100%; max-width: 400px;
+  text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.avatar-icon {
+  width: 60px; height: 60px; background: var(--accent);
+  border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; margin: 0 auto 15px;
+}
+
+.card-title { font-family: var(--font-display); margin-bottom: 10px; }
+
+.card-subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 30px; }
+
+/* --- Formulario & Inputs --- */
+.login-form { display: flex; flex-direction: column; gap: 15px; text-align: left; }
+
+.form-group label { display: block; font-size: 14px; color: #d4bfbf; margin-bottom: 5px; }
+
+.form-group input {
+  width: 100%; background: var(--bg-input); border: none;
+  padding: 12px; border-radius: 8px; color: #333; outline: none;
+}
+
+.input-wrapper { position: relative; }
+.toggle-pw {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: #555; cursor: pointer;
+}
+
+/* ELIMINAR EL AZUL DE LOS ENLACES */
+.form-options { display: flex; justify-content: space-between; font-size: 12px; }
+
+.forgot-link {
+  color: var(--text-muted) !important;
+  text-decoration: none !important;
+}
+
+.forgot-link:hover { color: var(--accent) !important; text-decoration: underline !important; }
+
+.btn-login {
+  background: var(--accent); color: white; border: none;
+  padding: 14px; border-radius: 8px; font-weight: bold;
+  font-size: 16px; margin-top: 10px; transition: 0.3s;
+}
+
+.btn-login:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+/* --- Divider & Social --- */
+.divider { display: flex; align-items: center; gap: 10px; margin: 15px 0; }
+.divider-line { flex: 1; height: 1px; background: rgba(255,255,255,0.2); }
+.divider-text { font-size: 12px; color: var(--text-muted); }
+
+.social-buttons { display: flex; gap: 10px; }
+.btn-social {
+  flex: 1; background: white; color: #333; border: none;
+  padding: 10px; border-radius: 8px; font-weight: bold;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+
+.register-prompt { font-size: 13px; color: var(--text-muted); margin-top: 15px; text-align: center; }
+.register-prompt a { color: var(--accent); text-decoration: none; font-weight: bold; }
+
+@media (max-width: 600px) {
+  .nav-menu { display: none; }
+}
